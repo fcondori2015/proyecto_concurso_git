@@ -33,7 +33,9 @@ public class Resolucion  implements java.io.Serializable {
      private Set cargos = new HashSet(0);
      private Set concursos = new HashSet(0);
 
-    public Resolucion() {
+    
+     
+     public Resolucion() {
     }
 
 	

@@ -84,7 +84,7 @@ public class ConcursoBean implements Serializable {
     private Persona personaBuscada;
     private List<Persona> listaResultadoBusquedaPersona;
     private List<Resolucion> listaReoluciones;
-    private Resolucion ultimaResolucion;
+   
 
     /**
      * Creates a new instance of ConcursoBean
@@ -296,6 +296,7 @@ public class ConcursoBean implements Serializable {
         this.listaReoluciones = listaReoluciones;
     }
 
+
     /**
      *
      * M E T O D O S
@@ -455,11 +456,8 @@ public class ConcursoBean implements Serializable {
                 listaReoluciones = resDao.getResoluciones("700-01268/2012");
                  break;
                  }
-            case "Cargo":{
-                ResolucionDao resDao = new ResolucionDaoImpl();
-                ultimaResolucion = resDao.obtenerUltimaResolucion();
-                break;
-            }
+           
+            
         }
     }
 
@@ -477,6 +475,14 @@ public class ConcursoBean implements Serializable {
         } catch (Exception exGeneral) {
             exGeneral.printStackTrace();
         }
+    }
+    
+    public String  obtenerNumeroUltimaResolucion (){
+    
+                ResolucionDao resDao = new ResolucionDaoImpl();
+                resolucionNueva = resDao.obtenerUltimaResolucion();
+               return resolucionNueva.getNumeroResolucion();
+         
     }
 
     public void guardarExpediente() {
