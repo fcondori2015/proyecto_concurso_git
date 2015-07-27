@@ -84,6 +84,7 @@ public class ConcursoBean implements Serializable {
     private Persona personaBuscada;
     private List<Persona> listaResultadoBusquedaPersona;
     private List<Resolucion> listaReoluciones;
+    private Resolucion ultimaResolucion;
 
     /**
      * Creates a new instance of ConcursoBean
@@ -454,7 +455,10 @@ public class ConcursoBean implements Serializable {
                 listaReoluciones = resDao.getResoluciones("700-01268/2012");
                  break;
                  }
-            
+            case "Cargo":
+                ResolucionDao resDao = new ResolucionDaoImpl();
+                ultimaResolucion = resDao.obtenerUltimaResolucion();
+                
         }
     }
 

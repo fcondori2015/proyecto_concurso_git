@@ -8,7 +8,6 @@
     <property name="hibernate.connection.username">nmlosada</property>
     <property name="hibernate.connection.password">siisa1234</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
-    
     <mapping resource="dominio/mappings/Persona.hbm.xml"/>
     <mapping resource="dominio/mappings/UnidadDeOrganizacion.hbm.xml"/>
     <mapping resource="dominio/mappings/Cargo.hbm.xml"/>
