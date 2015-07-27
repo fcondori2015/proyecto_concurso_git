@@ -42,6 +42,18 @@ public class ResolucionDaoImpl extends HibernateUtil implements ResolucionDao{
         return lista;
     }
 
+         
+    
+    public Resolucion obtenerUltimaResolucion(){
+       Criteria criteria = getSession().createCriteria(Resolucion.class);
+       criteria.addOrder(Order.desc("idResolucion"));
+       //criteria.add(Restrictions.eq("expediente",numeroExpediente));
+       return (Resolucion)criteria.list().get(0);
+    }
+
+    
+    
+    
 //    @Override
 //    public int getNuevoId() {
 //        Criteria criteria = getSession().createCriteria(Resolucion.class);

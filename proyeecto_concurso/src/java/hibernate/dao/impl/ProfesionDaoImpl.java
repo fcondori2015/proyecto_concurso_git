@@ -33,6 +33,7 @@ public class ProfesionDaoImpl extends HibernateUtil implements ProfesionDao {
         return (Profesion)getSession().get(Profesion.class, idProfesion);
     }
 
+ 
     @Override
     public void insertar(Profesion profesion) {
         try {

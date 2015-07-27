@@ -20,4 +20,5 @@ public interface ResolucionDao {
     public void insertar(Resolucion resolucion);
     public void eliminar(Resolucion resolucion);
     public void modificar(Resolucion resolucion);
+    public void obtenerUltimaResolucion();
 }

@@ -44,6 +44,9 @@ public class UsuarioDaoImpl extends HibernateUtil implements UsuarioDao {
         }
     }
 
+    
+    
+    
     @Override
     public int getNuevoId() {
         Criteria criteria = getSession().createCriteria(Usuario.class);
