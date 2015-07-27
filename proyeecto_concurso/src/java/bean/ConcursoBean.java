@@ -455,10 +455,11 @@ public class ConcursoBean implements Serializable {
                 listaReoluciones = resDao.getResoluciones("700-01268/2012");
                  break;
                  }
-            case "Cargo":
+            case "Cargo":{
                 ResolucionDao resDao = new ResolucionDaoImpl();
                 ultimaResolucion = resDao.obtenerUltimaResolucion();
-                
+                break;
+            }
         }
     }
 
